@@ -49,8 +49,11 @@ It runs on a simple PHP + JSON backend (no database setup required) and works in
 
 ---
 
-## 🖼️ Screenshot
-*(soon)*
+## 🖼️ Screenshots
+
+[<img src="https://github.com/user-attachments/assets/894ce675-2db5-4fcf-bff1-687d9e61420f" width="500"/>](https://github.com/user-attachments/assets/894ce675-2db5-4fcf-bff1-687d9e61420f)
+[<img src="https://github.com/user-attachments/assets/9f34350f-920c-4d05-b4e4-1545ded5bf55" width="500"/>](https://github.com/user-attachments/assets/9f34350f-920c-4d05-b4e4-1545ded5bf55)
+
 
 ---
 
