@@ -8,8 +8,8 @@ It runs on a simple PHP + JSON backend (no database setup required) and works in
 ---
 
 ## ✨ Upcoming Features
-- Language translations
-- Different currencies
+- Language translations ✓ (Fix switch at reload)
+- Different currencies ✓
 
 ## ✨ Features
 - **Filament Manager**
