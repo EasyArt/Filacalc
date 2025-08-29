@@ -1,32 +1,44 @@
-<?php
-// index.php — UI Shell (nur HTML), API ist in api.php
-?><!doctype html>
+<?php ?><!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Filacalc</title>
+  <title>SpoolCalc</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any">
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <h1>Filament Manager & Kostenrechner</h1>
+      <!-- Links: Sprach- & Währungsregler -->
+      <div class="controls-left">
+        <div class="segmented" id="lang-switch" aria-label="Language">
+          <button class="seg-btn flag" data-lang="de" type="button" title="Deutsch" aria-pressed="false">🇩🇪</button>
+          <button class="seg-btn flag" data-lang="en" type="button" title="English" aria-pressed="false">🇬🇧</button>
+        </div>
+        <div class="segmented" id="curr-switch" aria-label="Currency">
+          <button class="seg-btn curr" data-curr="EUR" type="button" title="Euro" aria-pressed="false">€</button>
+          <button class="seg-btn curr" data-curr="USD" type="button" title="US Dollar" aria-pressed="false">$</button>
+        </div>
+      </div>
+
+      <h1 id="app-title">SpoolCalc</h1>
+
       <div class="tabs">
-        <button class="tab" id="tab-filamente">Filamente</button>
-        <button class="tab active" id="tab-rechner">Filamentrechner</button>
+        <button class="tab" id="tab-filamente" type="button">Filamente</button>
+        <button class="tab active" id="tab-rechner" type="button">Filamentrechner</button>
       </div>
     </div>
 
+    <!-- Filamente -->
     <section id="view-filamente" style="display:none;">
       <div class="toolbar">
         <div class="search">
           <input id="search" type="text" placeholder="Suche nach Marke, Typ oder Farbe…" />
         </div>
         <div class="flex">
-          <button class="btn primary" id="btn-new">＋ Neu</button>
-          <button class="btn" id="btn-bulk-delete" disabled>Ausgewählte löschen (0)</button>
+          <button class="btn primary" id="btn-new" type="button">＋ Neu</button>
+          <button class="btn" id="btn-bulk-delete" disabled type="button">Ausgewählte löschen (0)</button>
         </div>
       </div>
 
@@ -49,13 +61,12 @@
       </div>
     </section>
 
+    <!-- Rechner -->
     <section id="view-rechner">
-      <div class="card">
-        <p class="muted">Wähle mehrere Filamente und gib das benötigte Gewicht in Gramm ein. Alle Preise beziehen sich auf 1 kg-Rollen.</p>
-      </div>
+      <div class="card"><p class="muted">Wähle mehrere Filamente und gib das benötigte Gewicht in Gramm ein. Alle Preise beziehen sich auf 1 kg-Rollen.</p></div>
       <div id="calc-rows" class="grid" style="margin-top:12px;"></div>
       <div class="toolbar" style="margin-top:12px;">
-        <button class="btn" id="btn-add-row">Weitere Position</button>
+        <button class="btn" id="btn-add-row" type="button">Weitere Position</button>
         <div class="right">
           <div class="muted">Gesamtkosten</div>
           <div id="total" style="font-weight:700; font-size:22px;">€ 0,00</div>
@@ -68,7 +79,7 @@
     </section>
   </div>
 
-  <!-- Gemeinsame Datalist (kein ID-Anzeigen) -->
+  <!-- Datalist für Suche im Rechner -->
   <datalist id="filament-options"></datalist>
 
   <!-- Modal -->
