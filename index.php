@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SpoolCalc</title>
+  <title>Filacalc</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon.ico" sizes="any">
 </head>
 <body>
   <div class="container">
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <h1 id="app-title">SpoolCalc</h1>
+      <h1 id="app-title">Filacalc</h1>
 
       <div class="tabs">
         <button class="tab" id="tab-filamente" type="button">Filamente</button>
@@ -105,3 +105,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
